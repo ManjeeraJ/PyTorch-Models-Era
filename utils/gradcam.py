@@ -5,7 +5,8 @@ from pytorch_grad_cam.utils.image import show_cam_on_image
 import numpy as np
 from functools import reduce
 from typing import Union
-
+import torch
+from torch import nn
 
 """
 Declared here and in utils.py, need to think over it 
