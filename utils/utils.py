@@ -51,7 +51,7 @@ def show_sample_images(
 
     fig = plt.figure(figsize=(20, 10))
     for i in range(num_images):
-        sub = fig.add_subplot(count // 5, 5, i + 1)
+        sub = fig.add_subplot(num_images // 5, 5, i + 1)
         # print (batch_data[i].shape)  # torch.Size([3, 32, 32])
         npimg = denormalize(images[i].cpu().numpy().squeeze())
         # print (batch_label[i])  # tensor(3), no need to add .item()
