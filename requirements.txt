@@ -1,4 +1,4 @@
 albumentations==1.2.1
 grad-cam==1.4.6
 torch_lr_finder==0.2.1
-torchinfo==1.7.2
+torchsummary==1.5.1

@@ -1,4 +1,4 @@
-from torchinfo import summary
+from torchsummary import summary
 
 def getModelSummary(model, device, input_size):
     """
