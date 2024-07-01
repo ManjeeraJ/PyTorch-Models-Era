@@ -23,7 +23,7 @@ class Tester:
             for batch_idx, (inputs, targets) in enumerate(self.test_loader):  # Verify : for inputs, targets in self.test_loader:
                 inputs, targets = inputs.to(self.device), targets.to(self.device)
                 output = self.model(inputs)
-                loss = self.criterion(output, targets).item()  # .item() may not be required
+                loss = self.criterion(output, targets)  # .item() throws error 'float' object has no attribute 'item'
 
                 test_loss += loss.item()
 
