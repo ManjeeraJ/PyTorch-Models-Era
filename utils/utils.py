@@ -40,9 +40,9 @@ def denormalize(img):
 # Another way of describing function. Docstring can be added as well. 
 def show_sample_images(
     loader,
+    classes,
     num_images: int=12,
-    label: str="",
-    classes: List[str] = [],
+    label: str=""
   ) -> None:
 
     images, labels = next(iter(loader))
