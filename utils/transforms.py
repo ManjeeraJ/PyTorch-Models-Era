@@ -15,7 +15,7 @@ class Transforms:
     def __init__(self, means, stds, train=True):
         if train:
             self.transformations = Compose(
-                [
+                [   Normalize(mean=means, std=stds, always_apply=True),
                     OneOf(
                         [
                             Sequential(
@@ -45,7 +45,7 @@ class Transforms:
                         ],
                         p=1,  # Probability of applying the OneOf block
                     ),
-                    Normalize(mean=means, std=stds, always_apply=True),
+                    # Normalize(mean=means, std=stds, always_apply=True),
                     ToTensorV2(),
                 ]
             )
