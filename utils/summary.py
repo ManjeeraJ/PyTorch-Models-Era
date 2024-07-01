@@ -1,6 +1,6 @@
 from torchinfo import summary
 
-def getModelSummary(model, input_size):
+def getModelSummary(model, device, input_size):
     """
     Prints a detailed summary of a PyTorch model.
 
@@ -11,4 +11,4 @@ def getModelSummary(model, input_size):
     None
     """
     # Print the model summary
-    summary(model, input_size=input_size)
+    summary(model.to(device), input_size=input_size)
